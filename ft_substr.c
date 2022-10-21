@@ -6,7 +6,7 @@
 /*   By: ivan-mel <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 11:07:29 by ivan-mel      #+#    #+#                 */
-/*   Updated: 2022/10/19 13:03:48 by ivan-mel      ########   odam.nl         */
+/*   Updated: 2022/10/21 17:47:04 by ivan-mel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
-	if (!(s1 = (char *)malloc(sizeof(char) * (len + 1))))
+	s1 = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s1)
 		return (NULL);
 	while (s[i] != '\0')
 	{

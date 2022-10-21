@@ -6,7 +6,7 @@
 /*   By: ivan-mel <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 15:31:38 by ivan-mel      #+#    #+#                 */
-/*   Updated: 2022/10/17 17:51:01 by ivan-mel      ########   odam.nl         */
+/*   Updated: 2022/10/20 16:37:37 by ivan-mel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ void	ft_putnbr_fd(int n, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_itoa(int n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ivan-mel <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 15:05:56 by ivan-mel      #+#    #+#                 */
-/*   Updated: 2022/10/17 18:51:08 by ivan-mel      ########   odam.nl         */
+/*   Updated: 2022/10/21 17:49:44 by ivan-mel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 #include <string.h>
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *result;
-	size_t i;
-	size_t j;
+	char	*result;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = ft_strlen(s1);
