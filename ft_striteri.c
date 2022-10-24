@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_striteri.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ivan-mel <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/19 11:49:03 by ivan-mel      #+#    #+#                 */
-/*   Updated: 2022/10/24 12:18:23 by ivan-mel      ########   odam.nl         */
+/*   Created: 2022/10/24 11:33:40 by ivan-mel      #+#    #+#                 */
+/*   Updated: 2022/10/24 12:01:49 by ivan-mel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,20 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char *str;
+	int	len;
 	int	i;
 
 	i = 0;
-
-	str[i] = '\0';
-	return (str);
+	if (s != NULL && f != NULL)
+	{
+		len = ft_strlen(s);
+		while (i < len)
+		{
+			f(i, s);
+			s++;
+			i++;
+		}
+	}
 }
