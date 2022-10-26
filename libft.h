@@ -6,13 +6,19 @@
 /*   By: ivan-mel <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 15:31:38 by ivan-mel      #+#    #+#                 */
-/*   Updated: 2022/10/24 12:09:28 by ivan-mel      ########   odam.nl         */
+/*   Updated: 2022/10/26 16:00:23 by ivan-mel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdio.h>
+
+typedef	struct s_list
+{
+	void	*content;
+	struct	s_list	*next;
+}		t_list;
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);
@@ -48,5 +54,6 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
+t_list	*ft_lstnew(void *content);
 
 #endif
