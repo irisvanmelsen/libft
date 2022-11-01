@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                         ::::::::             #
-#    Makefile                                           :+:    :+:             #
-#                                                      +:+                     #
-#    By: ivan-mel <marvin@codam.nl>                   +#+                      #
-#                                                    +#+                       #
-#    Created: 2022/10/11 17:13:38 by ivan-mel      #+#    #+#                  #
-#    Updated: 2022/10/11 18:56:25 by ivan-mel      ########   odam.nl          #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ivan-mel <ivan-mel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/11 17:13:38 by ivan-mel          #+#    #+#              #
+#    Updated: 2022/10/31 17:09:59 by ivan-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ SRCS		:=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
 				ft_tolower.c ft_toupper.c
 
-SRCSB		:=	ft_lstnew_bonus.c
+SRCSB		:=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
+				ft_lstsize_bonus.c ft_lstlast_bonus.c \
+				ft_lstadd_back_bonus.c
 
 RM 			:=	rm -f
 
@@ -45,7 +47,7 @@ all:	${NAME}
 	${CC} ${FLAGS} -c $<
 
 bonus:	${OBJSB}
-	${CC} ${FLAGS} -c ${SRCSB}
+	${AR} ${NAME} ${OBJS} ${OBJSB}
 
 clean:
 	${RM} ${OBJS}
