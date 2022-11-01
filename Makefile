@@ -6,7 +6,7 @@
 #    By: ivan-mel <ivan-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 17:13:38 by ivan-mel          #+#    #+#              #
-#    Updated: 2022/10/31 17:09:59 by ivan-mel         ###   ########.fr        #
+#    Updated: 2022/11/01 18:15:27 by ivan-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SRCS		:=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 
 SRCSB		:=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 				ft_lstsize_bonus.c ft_lstlast_bonus.c \
-				ft_lstadd_back_bonus.c
+				ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+				ft_lstclear_bonus.c ft_lstiter_bonus.c \
+				ft_lstmap_bonus.c 
 
 RM 			:=	rm -f
 

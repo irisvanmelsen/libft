@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_substr.c                                        :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: ivan-mel <marvin@codam.nl>                   +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/17 11:07:29 by ivan-mel      #+#    #+#                 */
-/*   Updated: 2022/10/21 17:47:04 by ivan-mel      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ivan-mel <ivan-mel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/17 11:07:29 by ivan-mel          #+#    #+#             */
+/*   Updated: 2022/11/01 17:32:13 by ivan-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
 	s1 = (char *)malloc(sizeof(char) * (len + 1));
 	if (!s1)
 		return (NULL);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: ivan-mel <marvin@codam.nl>                   +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2022/10/19 11:49:03 by ivan-mel      #+#    #+#                 */
-/*   Updated: 2022/10/25 16:21:51 by ivan-mel      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ivan-mel <ivan-mel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/19 11:49:03 by ivan-mel          #+#    #+#             */
+/*   Updated: 2022/11/01 18:10:45 by ivan-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	ft_wordlength(char const *s, char c)
 	return (i);
 }
 
-char	**ft_free(char **array)
+void	ft_free(char **array)
 {
 	int	i;
 
@@ -65,7 +65,7 @@ char	**ft_free(char **array)
 		i++;
 	}
 	free (array);
-	return (NULL);
+	return ;
 }
 
 void	ft_loopsplit(char const *s, char **array, char c)
@@ -83,7 +83,6 @@ void	ft_loopsplit(char const *s, char **array, char c)
 			if (!array[index])
 			{
 				ft_free(array);
-				return ;
 			}
 			index++;
 			i = i + ft_wordlength(s + i, c);
@@ -92,7 +91,6 @@ void	ft_loopsplit(char const *s, char **array, char c)
 		}
 		i++;
 	}
-	array[index] = NULL;
 }
 
 char	**ft_split(char const *s, char c)
@@ -105,13 +103,13 @@ char	**ft_split(char const *s, char c)
 	index = 0;
 	if (!s)
 		return (NULL);
-	array = malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
+	array = ft_calloc(sizeof(char *), (ft_wordcount(s, c) + 1));
 	if (!array)
 		return (NULL);
-	array[ft_wordcount(s, c)] = NULL;
 	ft_loopsplit(s, array, c);
 	return (array);
 }
+
 /*
 int	main(void)
 {
