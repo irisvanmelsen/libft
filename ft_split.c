@@ -6,7 +6,7 @@
 /*   By: ivan-mel <ivan-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:49:03 by ivan-mel          #+#    #+#             */
-/*   Updated: 2023/05/22 17:59:43 by ivan-mel         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:11:51 by ivan-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,10 @@ void	ft_free(char **array)
 void	ft_loopsplit(char const *s, char **array, char c)
 {
 	int	i;
+	int	index;
 
 	i = 0;
+	index = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != '\0' && s[i] != c)
