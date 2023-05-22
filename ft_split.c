@@ -6,7 +6,7 @@
 /*   By: ivan-mel <ivan-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:49:03 by ivan-mel          #+#    #+#             */
-/*   Updated: 2023/05/22 18:11:51 by ivan-mel         ###   ########.fr       */
+/*   Updated: 2023/05/22 18:19:03 by ivan-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,7 @@ void	ft_loopsplit(char const *s, char **array, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	int		index;
 
-	index = 0;
 	if (!s)
 		return (NULL);
 	array = ft_calloc(sizeof(char *), (ft_wordcount(s, c) + 1));
